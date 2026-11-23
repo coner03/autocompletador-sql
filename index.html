@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Autocompletador SQL</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="app">
+    <header>
+      <p class="eyebrow">BASE DE DATOS SQL</p>
+      <h1>Autocompletador</h1>
+      <p id="estado" class="estado">Cargando consultas...</p>
+    </header>
+
+    <section class="editor-card">
+      <div class="editor-toolbar">
+        <span>editor.sql</span>
+        <span class="hint">Pulsa Tab para aceptar</span>
+      </div>
+      <textarea id="editor" spellcheck="false" autocomplete="off"
+        placeholder="Ejemplo: SELECT * FROM"></textarea>
+    </section>
+
+    <section class="suggestions" aria-live="polite">
+      <h2>Sugerencias</h2>
+      <div id="lista" class="suggestion-list">
+        <span class="empty">Escribe una consulta para comenzar</span>
+      </div>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
